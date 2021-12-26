@@ -22,5 +22,5 @@ app.use('/',(req,res)=>{
 })
 
 mongoose.connect(process.env.MONGO).then(()=>{
-  app.listen(process.env.PORT,()=>console.log(`server:${process.env.PORT} has been connected to mongodb atlas database`))
+  app.listen(process.env.PORT,{useNewUrlParser: true},()=>console.log(`server:${process.env.PORT} has been connected to mongodb atlas database`))
 }).catch(e=>console.log(e))
