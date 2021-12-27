@@ -5,7 +5,7 @@ const morgan = require("morgan")
 const helmet = require("helmet")
 const bodyparser = require('body-parser')
 
-const {authRouter,userRouter} = require('./src/router')
+const {authRouter,userRouter,invoiceRouter} = require('./src/router')
 
 dotenv.config()
 const app = express()
@@ -14,6 +14,7 @@ app.use(bodyparser.json())
 
 app.use('/api/auth',authRouter)
 app.use('/api/user',userRouter)
+app.use('/api/invoice',invoiceRouter)
 
 app.use(morgan('common'))
 app.use(helmet())

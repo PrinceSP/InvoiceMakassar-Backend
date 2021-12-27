@@ -4,6 +4,6 @@ const userController = require('../controller/user')
 router.put('/:id',userController.updateUser)
 router.delete('/:id',userController.deleteUser)
 router.get('/:id',userController.getUser)
-router.get('/:id',userController.getAllUser)
+router.get('/userList/all',userController.getAllUser)
 
 module.exports = router

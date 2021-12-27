@@ -37,10 +37,6 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
-  vehicle:{
-    type:String,
-    required:true
-  },
   spareParts:{
     type:String,
     required:true
@@ -51,11 +47,11 @@ const Invoice = new mongoose.Schema({
     dupoet:Number
   },
   repairService:{
-    type:String,
+    type:Number,
     required:true
   },
   total:{
-    type:String,
+    type:Number,
     required:true
   }
 })
