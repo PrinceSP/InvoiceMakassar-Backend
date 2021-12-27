@@ -6,7 +6,7 @@ const User = new mongoose.Schema({
     required:true,
     min:8,
     max:40
-  }
+  },
   username:{
     type:String,
     required:true,
@@ -27,6 +27,7 @@ const User = new mongoose.Schema({
     type:String,
     default:""
   }
-})
+},
+{timestamps:true})
 
 module.exports = mongoose.model("User",User)

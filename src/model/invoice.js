@@ -59,3 +59,5 @@ const Invoice = new mongoose.Schema({
     required:true
   }
 })
+
+module.exports = new mongoose.model('Invoice',Invoice)

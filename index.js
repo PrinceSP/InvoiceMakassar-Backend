@@ -5,10 +5,15 @@ const morgan = require("morgan")
 const helmet = require("helmet")
 const bodyparser = require('body-parser')
 
+const {authRouter} = require('./src/router')
+
 dotenv.config()
 const app = express()
 
 app.use(bodyparser.json())
+
+app.use('/api/user',authRouter)
+
 app.use(morgan('common'))
 app.use(helmet())
 app.use((req,res,next)=>{
@@ -22,5 +27,5 @@ app.use('/',(req,res)=>{
 })
 
 mongoose.connect(process.env.MONGO).then(()=>{
-  app.listen(process.env.PORT,{useNewUrlParser: true},()=>console.log(`server:${process.env.PORT} has been connected to mongodb atlas database`))
+  app.listen(process.env.PORT,()=>console.log(`server:${process.env.PORT} has been connected to mongodb atlas database`))
 }).catch(e=>console.log(e))

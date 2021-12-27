@@ -11,7 +11,7 @@ exports.register = async (req,res)=>{
       fullname: req.body.fullname,
       username: req.body.username,
       email:  req.body.email,
-      password: hashedPassword,
+      password: hash,
       profilePicture: req.body.profilePicture
     })
     //save user to database
