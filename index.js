@@ -10,6 +10,9 @@ const {authRouter,userRouter,invoiceRouter} = require('./src/router')
 dotenv.config()
 const app = express()
 
+const MONGO = process.env.MONGO
+const PORT = process.env.PORT
+
 app.use(bodyparser.json())
 
 app.use('/api/auth',authRouter)
@@ -28,6 +31,6 @@ app.use('/',(req,res)=>{
   res.status(200).send('server is connected. this is / endpoint')
 })
 
-mongoose.connect(process.env.MONGO).then(()=>{
-  app.listen(process.env.PORT,()=>console.log(`server:${process.env.PORT} has been connected to mongodb atlas database`))
+mongoose.connect(MONGO).then(()=>{
+  app.listen(PORT,()=>console.log(`server:${PORT} has been connected to mongodb atlas database`))
 }).catch(e=>console.log(e))
