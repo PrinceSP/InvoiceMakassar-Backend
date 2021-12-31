@@ -21,7 +21,7 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
-  consument:{
+  client:{
     type:String,
     required:true
   },
@@ -53,7 +53,8 @@ const Invoice = new mongoose.Schema({
   total:{
     type:Number,
     required:true
-  }
-})
+  },
+  desc:String
+},{timestamps:true})
 
 module.exports = new mongoose.model('Invoice',Invoice)

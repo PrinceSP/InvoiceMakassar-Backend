@@ -10,7 +10,7 @@ router.delete('/:id', invoiceController.deleteInvoice)
 //get posts
 router.get('/:id', invoiceController.getInvoice)
 //get current user post
-router.get('/postsList/currentAll',invoiceController.getInvoicesList)
+router.get('/postsList/:userId',invoiceController.getInvoicesList)
 //get all users posts list
 router.get('/postsList/all',invoiceController.getAllInvoicesList)
 
