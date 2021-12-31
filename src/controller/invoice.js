@@ -1,5 +1,5 @@
 const Invoice = require('../model/invoice')
-const User = require('../model/User')
+const User = require('../model/user')
 
 exports.createInvoice = async (req,res)=>{
   const newInvoice = new Invoice(req.body)
