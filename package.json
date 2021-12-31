@@ -1,8 +1,11 @@
 {
   "name": "invoicemakassar-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "backend API for mobile and web invoice app",
   "main": "index.js",
+  "engines": {
+   "node": "14.18.0"
+  },
   "scripts": {
     "start": "node index.js",
     "start2": "nodemon index.js",

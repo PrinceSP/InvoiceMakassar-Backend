@@ -5,6 +5,7 @@ const morgan = require("morgan")
 const helmet = require("helmet")
 const bodyparser = require('body-parser')
 
+//import routes
 const {authRouter,userRouter,invoiceRouter} = require('./src/router')
 
 dotenv.config()
@@ -13,7 +14,6 @@ const app = express()
 const PORT = process.env.PORT || 8000
 
 app.use(bodyparser.json())
-app.use(bodyparser.urlencoded({extended:true}))
 
 //route middleware
 app.use('/api/auth',authRouter)
