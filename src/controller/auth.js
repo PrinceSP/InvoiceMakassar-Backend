@@ -33,7 +33,7 @@ exports.login = async (req,res)=>{
     //when password is not the same with password stored in database or bad request
     !validPassword && res.status(400).json('wrong password')
     //when there's nothing wrong, then send message
-    res.status(200).send('success login')
+    res.status(200).send(['success login',user])
   } catch (e) {
     return res.status(500).json(e)
   }
