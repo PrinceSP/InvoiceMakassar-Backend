@@ -2,6 +2,7 @@ const User = require('../model/user')
 const bcrypt = require('bcrypt')
 
 exports.register = async (req,res)=>{
+  res.set('Access-Control-Allow-Origin', '*');
   try{
     //generate new password and encrypt it with bcrypt
     const salt = await bcrypt.genSalt(10)
@@ -23,6 +24,7 @@ exports.register = async (req,res)=>{
 }
 
 exports.login = async (req,res)=>{
+  res.set('Access-Control-Allow-Origin', '*');
   try {
     //query to find only one of the user from database
     const user = await User.findOne({username:req.body.username})
