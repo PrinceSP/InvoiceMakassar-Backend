@@ -11,7 +11,7 @@ const {authRouter,userRouter,invoiceRouter} = require('./src/router')
 dotenv.config()
 const app = express()
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 7000
 
 app.use(bodyparser.json())
 
@@ -24,7 +24,7 @@ app.use(morgan('common'))
 app.use(helmet())
 
 app.use('/',(req,res)=>{
-  res.status(200).send('server is connected. this is / endpoint')
+  res.status(200).send('server is connected. this is / endpoint (invoice)')
 })
 //connnect to MongoDB database with mongoose library
 //app listen to the port for localhost server
