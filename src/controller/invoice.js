@@ -3,7 +3,6 @@ const User = require('../model/user')
 
 exports.createInvoice = async (req,res)=>{
   res.set('Access-Control-Allow-Origin', '*');
-
   const newInvoice = new Invoice(req.body)
   try {
     const savedInvoice = await newInvoice.save()
