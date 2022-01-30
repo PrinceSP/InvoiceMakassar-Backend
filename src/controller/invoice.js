@@ -65,7 +65,7 @@ exports.getInvoicesList = async (req,res)=>{
   try{
     const currentUser = await User.findById(req.params.userId)
     const userInvoices = await Invoice.find({userId:currentUser._id})
-    res.status(200).json(userInvoices)
+    res.status(200).send(userInvoices)
   } catch(e){
     return res.status(500).json(e)
   }
