@@ -10,8 +10,8 @@ router.delete('/:id', invoiceController.deleteInvoice)
 //get posts
 router.get('/:id', invoiceController.getInvoice)
 //get current user post
-router.get('/postsList/:userId',invoiceController.getInvoicesList)
+router.get('/invoicesList/:userId',invoiceController.getInvoicesList)
 //get all users posts list
-router.get('/postsList/all',invoiceController.getAllInvoicesList)
+router.get('/invoicesList/all',invoiceController.getAllInvoicesList)
 
 module.exports = router
