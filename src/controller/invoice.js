@@ -2,7 +2,6 @@ const Invoice = require('../model/invoice')
 const User = require('../model/user')
 
 exports.createInvoice = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
   const newInvoice = new Invoice(req.body)
   try {
     const savedInvoice = await newInvoice.save()
@@ -13,7 +12,6 @@ exports.createInvoice = async (req,res)=>{
 }
 
 exports.updateInvoice = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
   try{
     const invoice = await Invoice.findById(req.params.id)
@@ -31,7 +29,6 @@ exports.updateInvoice = async (req,res)=>{
 
 //delete only one invoice with its current user id
 exports.deleteInvoice = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
   try{
     const invoice = await Invoice.findById(req.params.id)
@@ -48,7 +45,6 @@ exports.deleteInvoice = async (req,res)=>{
 
 //get single invoice
 exports.getInvoice = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
   try{
     const invoice = await Invoice.findById(req.params.id)
@@ -60,7 +56,6 @@ exports.getInvoice = async (req,res)=>{
 
 //get current user invoices list
 exports.getInvoicesList = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
   try{
     const currentUser = await User.findById(req.params.userId)
@@ -73,7 +68,6 @@ exports.getInvoicesList = async (req,res)=>{
 
 //get users invoices list
 exports.getAllInvoicesList = async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const invoice = await Invoice.find()
     res.status(200).json(invoice)
