@@ -3,7 +3,6 @@ const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const morgan = require("morgan")
 const helmet = require("helmet")
-const cors = require("cors")
 const bodyparser = require('body-parser')
 
 //import routes
@@ -30,7 +29,6 @@ app.use('/api/invoice',invoiceRouter)
 
 app.use(morgan('common'))
 app.use(helmet())
-app.use(cors())
 
 app.use('/',(req,res)=>{
   res.status(200).send('server is connected. this is / endpoint (invoice)')
