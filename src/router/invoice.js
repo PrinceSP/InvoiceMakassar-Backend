@@ -12,6 +12,6 @@ router.get('/:id', invoiceController.getInvoice)
 //get current user post
 router.get('/invoicesList/:userId',invoiceController.getInvoicesList)
 //get all users posts list
-router.get('/invoicesList/allWorkOrder',invoiceController.getAllInvoicesList)
+router.get('/allInvoices',invoiceController.getAllInvoicesList)
 
 module.exports = router
