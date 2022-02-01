@@ -75,8 +75,8 @@ exports.getInvoicesList = async (req,res)=>{
 exports.getAllInvoicesList = async (req,res)=>{
   res.set('Access-Control-Allow-Origin', '*');
   try {
-    // const invoice = await Invoice.find()
-    res.status(200).send('ok received')
+    const invoice = await Invoice.find()
+    res.status(200).json(invoice)
   } catch (e) {
     return res.status(500).json(e)
   }
