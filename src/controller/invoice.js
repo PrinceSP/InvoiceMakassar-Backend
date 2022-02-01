@@ -69,7 +69,7 @@ exports.getInvoicesList = async (req,res)=>{
 //get users invoices list
 exports.getAllInvoicesList = async (req,res)=>{
   try {
-    const invoice = await Invoice.find().sort({"createdAt":1})
+    const invoice = await Invoice.find().sort({createAt:1})
     res.status(200).json(invoice)
   } catch (e) {
     return res.status(500).json(e)
