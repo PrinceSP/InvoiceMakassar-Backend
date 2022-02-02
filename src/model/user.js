@@ -19,6 +19,14 @@ const User = new mongoose.Schema({
     required:true,
     unique:true
   },
+  birthday:{
+    type:String,
+    default:"belum di isi"
+  },
+  phoneNumber:{
+    type:String,
+    default:"kosong"
+  }
   password:{
     type:String,
     min:8,
