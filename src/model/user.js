@@ -22,12 +22,12 @@ const User = new mongoose.Schema({
   birthday:{
     type:String,
     required:false,
-    default:""
+    min:6
   },
   phoneNumber:{
     type:String,
     required:false,
-    default:""
+    min:6
   },
   password:{
     type:String,
