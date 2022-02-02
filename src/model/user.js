@@ -21,13 +21,13 @@ const User = new mongoose.Schema({
   },
   birthday:{
     type:String,
-    required:false,
-    min:6
+    min:6,
+    required:true,
   },
   phoneNumber:{
     type:String,
-    required:false,
-    min:6
+    min:6,
+    required:true,
   },
   password:{
     type:String,
