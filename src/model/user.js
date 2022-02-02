@@ -23,11 +23,13 @@ const User = new mongoose.Schema({
     type:String,
     min:6,
     required:false,
+    default:"belum terisi"
   },
   phoneNumber:{
     type:String,
     min:6,
     required:false,
+    default:"belum terisi"
   },
   password:{
     type:String,
