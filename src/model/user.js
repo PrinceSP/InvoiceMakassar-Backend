@@ -21,11 +21,11 @@ const User = new mongoose.Schema({
   },
   birthday:{
     type:String,
-    default:"belum di isi"
+    default:""
   },
   phoneNumber:{
     type:String,
-    default:"kosong"
+    default:""
   },
   password:{
     type:String,
