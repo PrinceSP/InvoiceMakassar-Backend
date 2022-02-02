@@ -26,7 +26,7 @@ const User = new mongoose.Schema({
   phoneNumber:{
     type:String,
     default:"kosong"
-  }
+  },
   password:{
     type:String,
     min:8,
