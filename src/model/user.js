@@ -20,7 +20,7 @@ const User = new mongoose.Schema({
     unique:true
   },
   birthday:{
-    type:String,
+    type:Date,
     default:""
   },
   phoneNumber:{
