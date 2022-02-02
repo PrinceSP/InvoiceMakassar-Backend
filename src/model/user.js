@@ -21,9 +21,11 @@ const User = new mongoose.Schema({
   },
   birthday:{
     type:Date,
+    required:false
   },
   phoneNumber:{
     type:String,
+    required:false
   },
   password:{
     type:String,
