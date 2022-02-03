@@ -5,6 +5,10 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
+  sender:{
+    type:String,
+    required:true
+  },
   date:{
     type:String,
     required:true
