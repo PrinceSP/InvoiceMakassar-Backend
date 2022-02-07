@@ -51,11 +51,11 @@ const Invoice = new mongoose.Schema({
     dupoet:Number
   },
   repairService:{
-    type:Number,
+    type:mongoose.Decimal128,
     required:true
   },
   total:{
-    type:Number,
+    type:mongoose.Decimal128,
     required:true
   },
   desc:String
