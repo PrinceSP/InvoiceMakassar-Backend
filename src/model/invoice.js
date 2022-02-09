@@ -1,6 +1,4 @@
 const mongoose = require("mongoose")
-require('mongoose-double')(mongoose)
-const SchemaTypes = mongoose.Schema.Types;
 const Invoice = new mongoose.Schema({
   userId:{
     type:String,
@@ -52,11 +50,11 @@ const Invoice = new mongoose.Schema({
     dupoet:Number
   },
   repairService:{
-    type:SchemaTypes.Double,
+    type:String,
     required:true
   },
   total:{
-    type:SchemaTypes.Double,
+    type:String,
     required:true
   },
   desc:String
