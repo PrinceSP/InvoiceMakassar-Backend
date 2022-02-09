@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-
+require('mongoose-long')(mongoose)
+const {Types: {Long}} = mongoose;
 const Invoice = new mongoose.Schema({
   userId:{
     type:String,
@@ -51,11 +52,11 @@ const Invoice = new mongoose.Schema({
     dupoet:Number
   },
   repairService:{
-    type:mongoose.NumberLong,
+    type:Long,
     required:true
   },
   total:{
-    type:mongoose.NumberLong,
+    type:Long,
     required:true
   },
   desc:String
