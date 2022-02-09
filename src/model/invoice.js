@@ -8,6 +8,10 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
+  no:{
+    type:Number,
+    required:true
+  },
   date:{
     type:String,
     required:true
