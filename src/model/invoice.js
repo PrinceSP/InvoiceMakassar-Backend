@@ -44,20 +44,20 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
-  freonUse:{
-    klea:{
-      type:String,
-      default:""
-    },
-    bailian:{
-      type:String,
-      default:""
-    },
-    dupoet:{
-      type:String,
-      default:""
-    }
-  },
+  // freonUse:{
+  //   klea:{
+  //     type:String,
+  //     default:""
+  //   },
+  //   bailian:{
+  //     type:String,
+  //     default:""
+  //   },
+  //   dupoet:{
+  //     type:String,
+  //     default:""
+  //   }
+  // },
   repairService:{
     type:String,
     required:true
@@ -67,7 +67,7 @@ const Invoice = new mongoose.Schema({
     required:true
   },
   desc:String,
-  default:""
+  default:"-"
 },{timestamps:true})
 
 module.exports = new mongoose.model('Invoice',Invoice)
