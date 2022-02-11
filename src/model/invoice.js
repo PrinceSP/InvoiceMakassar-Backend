@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+,default:'-'const mongoose = require("mongoose")
 const Invoice = new mongoose.Schema({
   userId:{
     type:String,
@@ -45,9 +45,9 @@ const Invoice = new mongoose.Schema({
     required:true
   },
   freonUse:{
-    klea:Number,
-    bailian:Number,
-    dupoet:Number
+    klea:{type:String,default:'-'},
+    bailian:{type:String,default:'-'},
+    dupoet:{type:String,default:'-'}
   },
   repairService:{
     type:String,
@@ -57,7 +57,8 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:true
   },
-  desc:String
+  desc:String,
+  default:"-"
 },{timestamps:true})
 
 module.exports = new mongoose.model('Invoice',Invoice)
