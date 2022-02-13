@@ -48,7 +48,7 @@ const Invoice = new mongoose.Schema({
     type:String,
     required:false,
     default:"-"
-  }
+  },
   freonUse:{
     klea:{
       type:String,
