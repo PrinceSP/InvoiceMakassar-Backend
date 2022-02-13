@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const User = new mongoose.Schema({
   fullname:{
     type:String,
-    required:true,
+    required:false,
     min:8,
     max:40
   },
@@ -16,7 +16,7 @@ const User = new mongoose.Schema({
   },
   email:{
     type:String,
-    required:true,
+    required:false,
     unique:true
   },
   birthday:{
