@@ -50,18 +50,8 @@ const Invoice = new mongoose.Schema({
     default:"-"
   },
   freonUse:{
-    klea:{
-      type:String,
-      default:"-"
-    },
-    bailian:{
-      type:String,
-      default:"-"
-    },
-    dupoet:{
-      type:String,
-      default:"-"
-    }
+    type:String,
+    default:"-"
   },
   repairService:{
     type:String,
