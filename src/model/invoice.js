@@ -26,7 +26,7 @@ const Invoice = new mongoose.Schema({
   },
   client:{
     type:String,
-    required:true
+    required:false
   },
   phoneNumber:{
     type:String,
