@@ -22,7 +22,7 @@ const Invoice = new mongoose.Schema({
   },
   vehicleType:{
     type:String,
-    required:true
+    required:false
   },
   client:{
     type:String,
@@ -42,7 +42,7 @@ const Invoice = new mongoose.Schema({
   },
   spareParts:{
     type:String,
-    required:true
+    required:false
   },
   sparePartsPrice:{
     type:String,
