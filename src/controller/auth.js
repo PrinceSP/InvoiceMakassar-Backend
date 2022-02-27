@@ -37,6 +37,6 @@ exports.login = async (req,res)=>{
     //when there's nothing wrong, then send message
     res.status(200).send({message:'success login',datas:user})
   } catch (e) {
-    res.status(500).json(e)
+    res.status(500).send(e)
   }
 }
