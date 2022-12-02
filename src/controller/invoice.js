@@ -56,7 +56,6 @@ exports.getInvoice = async (req,res)=>{
 
 //get current user invoices list
 exports.getInvoicesList = async (req,res)=>{
-
   try{
     const currentUser = await User.findById(req.params.userId)
     const userInvoices = await Invoice.find({userId:currentUser._id})
